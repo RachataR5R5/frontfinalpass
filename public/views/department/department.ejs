@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+<body>
+    <nav>
+        <div class="logo">ระบบจัดการงานภายในองค์กร</div>
+        <ul class="nav-links">
+          <li><a href="http://localhost:5500/Tasks/">Task</a></li>
+          <li><a href="http://localhost:5500/Projects/">Project</a></li>
+          <li><a href="http://localhost:5500/Departments/">Department</a></li>
+          <li><a href="http://localhost:5500/employees/">Employee</a></li>
+        </ul>
+      </nav>
+    
+
+         <h2>แผนกงาน : <%= departments.Name  %> </h2>
+         
+
+
+
+      </table>
+      <br>
+
+      <table>
+        <tr>
+          <th>departmentsID</th>
+          <th>Name</th>
+          <th>EmployeeID</th>
+          <th>Action</th>
+        </tr>
+        
+        <tr>
+
+          <td><%= departments.DepartmentID  %></td>
+          <td><%= departments.Name  %></td> 
+          <td><%= departments.EmployeeID %></td>
+          <td>
+            <a href="#">Edit</a>
+            <a href="#">Delete</a>
+
+          </td>
+        </tr>
+
+
+
+
+      </table>
+      <a href="http://localhost:5500/departments">Back</a>
+
+
+      
+      
+
+</body>
+</html>

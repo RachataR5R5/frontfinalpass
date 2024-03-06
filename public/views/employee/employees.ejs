@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+<body>
+    <nav>
+        <div class="logo">ระบบจัดการงานภายในองค์กร</div>
+        <ul class="nav-links">
+          <li><a href="http://localhost:5500/Tasks/">Task</a></li>
+          <li><a href="http://localhost:5500/Projects/">Project</a></li>
+          <li><a href="http://localhost:5500/Departments/">Department</a></li>
+          <li><a href="http://localhost:5500/employees/">Employee</a></li>
+        </ul>
+      </nav>
+    
+  <h2>แสดงพนักงานทั้งหมด</h2>
+    <table>
+        <tr>
+          <th>employeesID</th>
+          <th>Name</th>
+          <th>Position</th>
+          <th>DepartmentID</th>
+          <th>Action</th>
+        </tr>
+        <% for(var i = 0; i < employees.length; i++) { %>
+        <tr>
+          <td><%= employees[i].EmployeeID  %></td>
+          <td><%= employees[i].Name  %></td>
+          <td><%= employees[i].Position  %></td>
+          <td><%= employees[i].DepartmentID  %></td>
+          <td>
+            <a href="http://localhost:5500/Employees/<%= employees[i].EmployeeID  %>">Detail</a>
+            <a href="http://localhost:5500/Employee/update/<%= employees[i].EmployeeID %>">Edit</a>
+            <a href="http://localhost:5500/Employee/delete/<%= employees[i].EmployeeID %>">Delete</a>
+
+          </td>
+        </tr>
+    <% } %>
+
+
+      </table>
+      <a href="http://localhost:5500/Employee/create/">Create Employee</a>
+
+
+      
+      
+
+</body>
+</html>

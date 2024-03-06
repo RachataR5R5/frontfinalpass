@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+<body>
+  <nav>
+    <div class="logo">ระบบจัดการงานภายในองค์กร</div>
+    <ul class="nav-links">
+      <li><a href="http://localhost:5500/Tasks/">Task</a></li>
+      <li><a href="http://localhost:5500/Projects/">Project</a></li>
+      <li><a href="http://localhost:5500/Departments/">Department</a></li>
+      <li><a href="http://localhost:5500/employees/">Employee</a></li>
+    </ul>
+  </nav>
+
+        
+         
+
+  <h2>NAME : <%= Project.Name  %> </h2>
+
+      </table>
+      <br>
+
+      <table>
+        <tr>
+          <th>ProjectID</th>
+          <th>Name</th>
+          <th>DepartmentID</th>
+          <th>Action</th>
+        </tr>
+        
+        <tr>
+          
+          <td><%= Project.ProjectID  %></td>
+          <td><%= Project.Name  %></td> 
+          <td><%= Project.DepartmentID  %></td>
+          <td>
+            <a href="http://localhost:5500/Project/update/<%= Project.ProjectID %> ">Edit</a>
+            <a href="http://localhost:5500/Projects/delete/<%= Project.ProjectID %>">Delete</a>
+
+          </td>
+        </tr>
+        
+
+
+
+      </table>
+      <a href="http://localhost:5500/Tasks">Back</a>
+
+
+      
+      
+
+</body>
+</html>

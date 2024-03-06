@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+<body>
+  <nav>
+    <div class="logo">ระบบจัดการงานภายในองค์กร</div>
+    <ul class="nav-links">
+      <li><a href="http://localhost:5500/Tasks/">Task</a></li>
+      <li><a href="http://localhost:5500/Projects/">Project</a></li>
+      <li><a href="http://localhost:5500/Departments/">Department</a></li>
+      <li><a href="http://localhost:5500/employees/">Employee</a></li>
+    </ul>
+  </nav>
+
+  <h2>แผนกทั้งหมด</h2>
+    <table>
+        <tr>
+          <th>DepartmentID</th>
+          <th>Name</th>
+          <th>EmployeeID</th>
+          <th>Action</th>
+        </tr>
+        <% for(var i = 0; i < departments.length; i++) { %>
+        <tr>
+          <td><%= departments[i].DepartmentID  %></td>
+          <td><%= departments[i].Name  %></td>
+          <td><%= departments[i].EmployeeID  %></td>
+          <td>
+            <a href="http://localhost:5500/departments/<%= departments[i].DepartmentID  %>">Detail</a>
+            <a href="http://localhost:5500/department/update/<%= departments[i].DepartmentID %>">Edit</a>
+            <a href="http://localhost:5500/department/delete/<%= departments[i].DepartmentID %>">Delete</a>
+
+          </td>
+        </tr>
+    <% } %>
+
+
+      </table>
+      <a href="http://localhost:5500/Department/create/">Create departments</a>
+
+
+      
+      
+
+</body>
+</html>
